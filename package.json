@@ -1,6 +1,6 @@
 {
-    "name": "starter",
-    "description": "A starter theme for Ghost.",
+    "name": "Aureola",
+    "description": "A Bulma theme for Ghost.",
     "demo": "https://starter.ghost.io",
     "version": "1.0.0",
     "engines": {
