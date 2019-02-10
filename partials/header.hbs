@@ -1,0 +1,32 @@
+<nav class="navbar is-transparent is-dark " role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+
+        <a class="navbar-item" href="{{@site.url}}">
+            {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="{{@site.title}}" />
+            {{else}}
+            {{@site.title}}
+            {{/if}}
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div><!-- navbar brand-->
+    <div id="navbar-main-menu" class="navbar-menu">
+        <div class="navbar-start">
+            {{navigation}}
+        </div>
+        <div class="navbar-end">
+               {{#if @site.facebook}}
+                    <a href="{{facebook_url @site.facebook}}" class="navbar-item" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    {{/if}}
+                    {{#if @site.twitter}}
+                    <a href="{{twitter_url @site.twitter}}" class="navbar-item" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    {{/if}}
+                    <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="navbar-item" title="RSS" target="_blank" rel="noopener"><i class="fa fa-rss"></i></a>     
+        </div>
+    </div><!-- navbar menu -->
+</nav>

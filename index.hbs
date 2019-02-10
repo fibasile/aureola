@@ -1,0 +1,65 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+
+
+{{#is "home"}}
+    {{#if @site.description}}
+{{> hero}}
+    {{/if}}
+{{/is}}
+
+<section class="is-large" style="padding-top: 32px;">
+<div class="container">
+<div class="tile is-ancestor">
+    {{#foreach posts from="1" to="2"}}
+  <div class="tile is-parent {{#if @first}}is-8{{/if}}">
+    <article class="tile is-child box">
+      {{> "post-card"}}
+
+    </article>
+  </div>
+  {{/foreach}}
+</div>
+</div>
+</section>
+
+<section class="is-large" style="padding-top:32px">
+    <div class="container">
+<div class="post-feed">
+    <div class="tile is-ancestor">
+        <div class="tile is-parent is-vertical  is-4">
+            
+{{#foreach posts from="3" to="3"}}
+    <div class="tile is-child box">
+    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+    {{> "post-card"}}
+    </div>
+{{/foreach}}
+        </div>
+          <div class="tile is-parent is-vertical  is-4">
+            
+{{#foreach posts from="4" to="5"}}
+    <div class="tile is-child box ">
+    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+    {{> "post-card"}}
+    </div>
+{{/foreach}}
+        </div>
+                <div class="tile is-parent is-vertical  is-4">
+            
+{{#foreach posts from="6"}}
+    <div class="tile is-child box ">
+    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+    {{> "post-card"}}
+    </div>
+{{/foreach}}
+        </div>
+        
+    </div>
+
+</div>
+</div>
+</section>
